@@ -1,10 +1,26 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>생각하신 카드는...</title>
-    </head>
-    <body>
-            <h1>9<span style="color:black">♣</span></h1>
-    </body>
+
+<head>
+<meta charset="utf-8">
+<title>생각하신 카드는...</title>
+</head>
+
+<body>
+<button onclick="myFunction()">생각하신 카드는</button>
+
+</br>
+<p id=value style="font-size:300%;display:inline;"></p>
+<p id=suit style="font-size:300%;display:inline; color:red"></p>
+<p id=comment style="font-size:300%;display:inline"></p>
+
+<script>
+function myFunction() {
+document.getElementById("value").innerHTML = "9";
+document.getElementById("suit").innerHTML = "♣";
+document.getElementById("comment").innerHTML = "입니다!";
+}
+</script>
+
+</body>
 </html>
