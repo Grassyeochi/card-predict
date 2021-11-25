@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta property="og:url"                content="grassyeochi.github.io/card-predict/00.html" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="카드 확인" />
+<meta property="og:description"        content="카드 확인용 페이지 입니다." />
+<meta property="og:image"              content="thumnail.jpg" />
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+
+<body>
+<input type=button style="width:100pt; height:60pt; font-size:20pt;" value="이 카드는" onclick="myFunction()" />
+
+</br>
+<p id=text1 style="font-size:300%;display:inline; color:black"></p>
+<p id=text2 style="font-size:300%;display:inline; color:yellow"></p>
+<p id=text3 style="font-size:300%;display:inline; color:red"></p>
+<p id=text4 style="font-size:300%;display:inline; color:blue"></p>
+<p id=text5 style="font-size:300%;display:inline; color:black"></p>
+<p id=comment style="font-size:300%;display:inline"></p>
+
+<script>
+function myFunction() {
+document.getElementById("text1").innerHTML = "J";
+document.getElementById("text2").innerHTML = "O";
+document.getElementById("text3").innerHTML = "K";
+document.getElementById("text4").innerHTML = "E";
+document.getElementById("text5").innerHTML = "R";
+document.getElementById("comment").innerHTML = "입니다!";
+}
+</script>
+
+</body>
+</html>
