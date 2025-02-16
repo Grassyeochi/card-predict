@@ -11,21 +11,53 @@
   <meta property="og:image"              content="thumnail.jpg" />
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+
+  <style>
+    /* 중앙 정렬을 위한 스타일 */
+    .center-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .button {
+      width: 150px;
+      height: 60px;
+      font-size: 20pt;
+      margin: 10px;
+    }
+  </style>
 </head>
 
   <body>
   <input type=button style="width:100pt; height:60pt; font-size:20pt;" value="이 카드는" onclick="myFunction()" />
 
+  <div class="center-container">
+    <input type="button" class="button" value="화면 캡처" onclick="captureScreen()" />
+  </div>
+
   </br>
   <p id=value style="font-size:300%;display:inline;"></p>
   <p id=suit style="font-size:300%;display:inline; color:red"></p>
   <p id=comment style="font-size:300%;display:inline"></p>
-
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
     function myFunction() {
       document.getElementById("value").innerHTML = "A";
       document.getElementById("suit").innerHTML = "♥";
       document.getElementById("comment").innerHTML = "입니다!";
+    }
+    
+    function captureScreen() {
+      html2canvas(document.body).then(canvas => {
+        let link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "screenshot.png";
+        link.click();
+      });
     }
   </script>
 
