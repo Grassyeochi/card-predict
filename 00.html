@@ -28,20 +28,35 @@
       font-size: 20pt;
       margin: 10px;
     }
+
+    .card-result {
+      display: none; /* 초기에 숨김 */
+      font-size: 300%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* 캡처 버튼 숨김 */
+    #captureBtn {
+      display: none;
+    }
   </style>
 </head>
 
   <body>
-  <input type=button style="width:100pt; height:60pt; font-size:20pt;" value="이 카드는" onclick="myFunction()" />
-
+  
   <div class="center-container">
-    <input type="button" class="button" value="화면 캡처" onclick="captureScreen()" />
+    <input type=button style="width:100pt; height:60pt; font-size:20pt;" value="이 카드는" onclick="myFunction()" />
+    <input type="button" id="captureBtn" class="button" value="화면 캡처" onclick="captureScreen()" />
   </div>
 
-  </br>
-  <p id=value style="font-size:300%;display:inline;"></p>
-  <p id=suit style="font-size:300%;display:inline; color:red"></p>
-  <p id=comment style="font-size:300%;display:inline"></p>
+  <br>
+  <!-- 카드 결과 표시 -->
+  <div id="cardDisplay" class="card-result">
+    <span id="value"></span>
+    <span id="suit" style="color:red;"></span>
+    <span id="comment"></span>
+  </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
@@ -49,6 +64,10 @@
       document.getElementById("value").innerHTML = "A";
       document.getElementById("suit").innerHTML = "♥";
       document.getElementById("comment").innerHTML = "입니다!";
+
+      // 요소 보이기
+      document.getElementById("cardDisplay").style.display = "block";
+      document.getElementById("captureBtn").style.display = "inline-block"; // 버튼 활성화
     }
     
     function captureScreen() {
