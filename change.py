@@ -5,7 +5,9 @@ output_dir = "."
 
 # 카드 숫자 변환 함수
 def get_card_value(num):
-    if num == 11:
+    if num == 1:
+        return "A"
+    elif num == 11:
         return "J"
     elif num == 12:
         return "Q"
