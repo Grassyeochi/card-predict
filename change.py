@@ -109,7 +109,8 @@ for i in range(52):
             </div>
         
             <div class="center-container">
-              <div id="randomNumber" style="font-size: 40pt; margin-bottom: 10px;"></div>
+              <div id="randomNumber" style="font-size: 60pt; margin-bottom: 10px;"></div>
+              <br>
               <input type="button" id="captureBtn" class="button" value="화면 캡처" onclick="captureScreen()" />
             </div>
         
